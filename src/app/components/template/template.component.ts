@@ -8,6 +8,9 @@ import { NgForm } from '@angular/forms';
   .ng-invalid.ng-touched:not(form){
     border: 1px solid #FF8080;
   }
+  .error-text{
+    color: #FF8080;
+  }
   `]
 })
 export class TemplateComponent {
@@ -15,8 +18,32 @@ export class TemplateComponent {
   user: Object = {
     name: '',
     lastName: '',
-    email: ''
+    email: '',
+    country: '',
+    genre: '',
+    terms: false
   };
+
+  countries = [
+    {
+      code: 'MX',
+      name: 'México'
+    },
+    {
+      code: 'USA',
+      name: 'United States'
+    },
+    {
+      code: 'ESP',
+      name: 'España'
+    },
+    {
+      code: 'ENG',
+      name: 'England'
+    }
+  ];
+
+  genres = ['Hombre', 'Mujer', 'Sin definir'];
 
   constructor() { }
 
